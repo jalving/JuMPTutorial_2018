@@ -1,0 +1,164 @@
+\documentclass[xcolor={dvipsnames}]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{textpos}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{beramono}
+\usepackage{listings}
+\usepackage{epsfig,amsfonts}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\bibliographystyle{plain}
+\usepackage{amssymb, palatino, geometry,url}
+\usepackage{algorithmic}
+\usepackage{fancyhdr}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{epsfig,amsfonts}
+\usepackage{amsmath}
+\usepackage{multirow}
+\bibliographystyle{plain}
+\usepackage{amssymb, palatino, geometry,url}
+\usepackage{algorithmic}
+\usepackage[noresetcount,lined,boxed]{algorithm2e} % ... for algorithms
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{breqn}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\calE}{\mathcal{E}}
+\newcommand{\calT}{\mathcal{T}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\calK}{\mathcal{K}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\norm}[1]{\left\lvert#1\right\rvert}
+\newcommand{\normd}[1]{\left\lvert\left\lvert#1\right\rvert\right\rvert}
+\usepackage{placeins}
+\usepackage{lineno}
+\usepackage{array}
+\usepackage{hyperref}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage[T1]{fontenc}
+\usepackage{beramono}
+\usepackage{accsupp}
+\newcommand*{\noaccsupp}[1]{\BeginAccSupp{ActualText={}}#1\EndAccSupp{}}
+\makeatletter
+%\colorlet{shadecolour}{Thistle3!50}
+\colorlet{shadecolour}{gray!40}
+\newcommand\Ashaded[1]{\let\bgroup{\romannumeral-`}\@Ashaded#1&&\ENDDNE}
+\def\@Ashaded#1&#2&#3\ENDDNE{%
+\ifnum0=`{}\fi \setbox \z@
+\hbox{$\displaystyle#1{}\m@th$\kern\fboxsep \kern\fboxrule }%
+\edef\@tempa {\kern \wd\z@ &\kern -\the\wd\z@ \fboxsep
+\the\fboxsep }\@tempa \colorbox{shadecolour}{$#1#2 $}%
+}
+% \colorlet{bgcolour}{LavenderBlush1!50}
+% \colorlet{rulecolour}{Plum4}
+% \newcommand\Acolorboxed[1]{\let\bgroup{\romannumeral-`}\@Acolorboxed#1&&\ENDDNE}
+% \def\@Acolorboxed#1&#2&#3\ENDDNE{%
+%   \ifnum0=`{}\fi \setbox \z@
+%     \hbox{$\displaystyle#1{}\m@th$\kern\fboxsep \kern\fboxrule }%
+%     \edef\@tempa {\kern \wd\z@ &\kern -\the\wd\z@ \fboxsep
+%         \the\fboxsep\fboxrule \the\fboxrule }\@tempa \fcolorbox{rulecolour}{bgcolour}{$ #1#2 $}%
+% }
+\makeatother
+
+
+%\usetheme{Madrid}
+\usetheme[secheader]{Boadilla}
+\usecolortheme{beaver}
+\beamertemplatenavigationsymbolsempty  %get rid of the beamer navigation bar
+\addtobeamertemplate{block begin}{\setlength\abovedisplayskip{0pt}}  %eliminate space in blocks
+
+\titlegraphic{\raggedright\includegraphics[scale = 0.25]{wisconsin_logo.eps}}
+\setbeamertemplate{title page}
+{
+  \begingroup
+    \centering
+    {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}\vskip1em
+    \begin{beamercolorbox}[sep=8pt,center]{title}
+      \usebeamerfont{title}\inserttitle\par%
+      \ifx\insertsubtitle\@empty%
+      \else%
+        \vskip0.25em%
+        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+      \fi%
+    \end{beamercolorbox}%
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=8pt,center]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=8pt,center]{institute}
+      \usebeamerfont{institute}\insertinstitute
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=8pt,center]{date}
+      \usebeamerfont{date}\insertdate
+    \end{beamercolorbox}
+  \endgroup
+  \vfill
+}
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
+
+\lstdefinelanguage{Julia}%
+  {morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
+      end,export,false,for,function,immutable,import,importall,if,in,%
+      macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
+      using,while,@variable,@constraint,@NLconstraint,@objective,
+      PlasmoGraph,add_node,add_edge,setmodel,setcouplingfunction,@linkconstraint,getconnectedfrom,getconnectedto,
+      GraphModel,add_subgraph!,getnode,getgraph},%
+   sensitive=true,%
+   alsoother={$},%
+   morecomment=[l]\#,%
+   morecomment=[n]{\#=}{=\#},%
+   morestring=[s]{"}{"},%
+   morestring=[m]{'}{'},%
+}[keywords,comments,strings]%
+
+\lstset{%
+    language         = Julia,
+    basicstyle       = \scriptsize,
+    keywordstyle     = \bfseries\color{blue},
+    stringstyle      = \color{magenta},
+    commentstyle     = \color{ForestGreen},
+    showstringspaces = false,
+}
+
+%Information to be included in the title page:
+\title[Introduction to JuMP] %optional
+{Introduction to JuMP}
+\subtitle{Modeling Optimization Problems}
+\author[Jalving] % (optional, for multiple authors)
+{Jordan Jalving}
+\institute[UW-Madison] % (optional)
+{
+  Department of Chemical and Biological Engineering\\
+  University of Wisconsin-Madison\\\vspace{0.1in}
+}
+\date[March 2018] % (optional)
+{UW-Madison\\ March 2018}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{1mm}(0.95\textwidth,-0.95cm)
+\includegraphics[scale = 0.081]{small_logo.eps}
+\end{textblock*}}
+
+\begin{document}
+\frame{\titlepage}
+
+\input{JuMP.tex}
+
+\end{document}

@@ -1,0 +1,26 @@
+\frametitle{Solving Optimization Problems with JuMP}
+  {\tt JuMP} also enables compact syntax expressions:
+  \begin{columns}
+    \column{0.1\textwidth}
+    \column{0.25\textwidth}
+      \begin{align*}
+          \min_{x_1,x_2} \ \ &\sum_{j\in \{1,2\}}x_j^2\\
+          s.t. \ \ &\sum_{j\in \{1,2\}}x_j= 5\\
+          &e^{x_1} \le 4\\
+      \end{align*}
+    \column{1.5\textwidth}
+      \lstset{ basicstyle = \scriptsize}
+      \begin{lstlisting}
+        using JuMP
+        using Ipopt
+        m = Model()
+        S = collect(1:2)
+        @objective(m,Min,sum(x[j]^2 for j in S))
+        @variable(m,x[S])
+        @constraint(m,sum(x[j] for j in S) == 5)
+        @NLconstraint(m,exp(x[1]) <= 4)
+        solve(m)
+      \end{lstlisting}
+    \vspace{0.5cm}
+  \end{columns}
+ Example implemented in Julia notebook {\footnotesize{\tt simple_model_set.ipynb}}
