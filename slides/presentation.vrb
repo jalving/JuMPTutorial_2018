@@ -23,4 +23,4 @@
       \end{lstlisting}
     \vspace{0.5cm}
   \end{columns}
- Example implemented in Julia notebook {\footnotesize{\tt simple_model_set.ipynb}}
+ Example implemented in Julia notebook {\footnotesize{\tt simple_nonlinearmodel_set.ipynb}}

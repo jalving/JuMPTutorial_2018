@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.30)  17 MAR 2018 19:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.30)  20 MAR 2018 11:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1744,24 +1744,26 @@ Package epstopdf Info: Source file: <small_logo.eps>
 (epstopdf)                    size: 29315 bytes
 (epstopdf)             Command: <repstopdf --outfile=small_logo-eps-converted-t
 o.pdf small_logo.eps>
-(epstopdf)             \includegraphics on input line 15.
+(epstopdf)             \includegraphics on input line 11.
 Package epstopdf Info: Output file is already uptodate.
 
 <small_logo-eps-converted-to.pdf, id=40, 205.76875pt x 323.2075pt>
 File: small_logo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use small_logo-eps-converted-to.pdf>
-Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 15.
+Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 11.
 
 (pdftex.def)             Requested size: 16.66591pt x 26.17769pt.
 
-Overfull \hbox (13.82065pt too wide) in paragraph at lines 15--15
+Overfull \hbox (13.82065pt too wide) in paragraph at lines 11--11
 [][]  
  []
 
 [2
 
  <./small_logo-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 40.
 Package epstopdf Info: Source file: <small_logo.eps>
 (epstopdf)                    date: 2017-06-20 13:46:58
 (epstopdf)                    size: 1319490 bytes
@@ -1770,42 +1772,115 @@ Package epstopdf Info: Source file: <small_logo.eps>
 (epstopdf)                    size: 29315 bytes
 (epstopdf)             Command: <repstopdf --outfile=small_logo-eps-converted-t
 o.pdf small_logo.eps>
-(epstopdf)             \includegraphics on input line 36.
+(epstopdf)             \includegraphics on input line 40.
 Package epstopdf Info: Output file is already uptodate.
 File: small_logo-eps-converted-to.pdf Graphic file (type pdf)
  <use small_logo-eps-converted-to.pdf>
-Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 36.
+Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 40.
 
 (pdftex.def)             Requested size: 16.66591pt x 26.17769pt.
 
-Overfull \hbox (13.82065pt too wide) in paragraph at lines 36--36
+Overfull \hbox (13.82065pt too wide) in paragraph at lines 40--40
 [][]  
  []
 
 [3
 
-] <interior_point.png, id=80, 650.43pt x 580.41844pt>
+]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 71.
+Package epstopdf Info: Source file: <small_logo.eps>
+(epstopdf)                    date: 2017-06-20 13:46:58
+(epstopdf)                    size: 1319490 bytes
+(epstopdf)             Output file: <small_logo-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-17 18:33:50
+(epstopdf)                    size: 29315 bytes
+(epstopdf)             Command: <repstopdf --outfile=small_logo-eps-converted-t
+o.pdf small_logo.eps>
+(epstopdf)             \includegraphics on input line 71.
+Package epstopdf Info: Output file is already uptodate.
+File: small_logo-eps-converted-to.pdf Graphic file (type pdf)
+ <use small_logo-eps-converted-to.pdf>
+Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 71.
+
+(pdftex.def)             Requested size: 16.66591pt x 26.17769pt.
+
+Overfull \hbox (13.82065pt too wide) in paragraph at lines 71--71
+[][]  
+ []
+
+
+Overfull \vbox (1.83058pt too high) detected at line 71
+ []
+
+[4
+
+]
+Package epstopdf Info: Source file: <small_logo.eps>
+(epstopdf)                    date: 2017-06-20 13:46:58
+(epstopdf)                    size: 1319490 bytes
+(epstopdf)             Output file: <small_logo-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-17 18:33:50
+(epstopdf)                    size: 29315 bytes
+(epstopdf)             Command: <repstopdf --outfile=small_logo-eps-converted-t
+o.pdf small_logo.eps>
+(epstopdf)             \includegraphics on input line 104.
+Package epstopdf Info: Output file is already uptodate.
+File: small_logo-eps-converted-to.pdf Graphic file (type pdf)
+ <use small_logo-eps-converted-to.pdf>
+Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 104
+.
+(pdftex.def)             Requested size: 16.66591pt x 26.17769pt.
+
+Overfull \hbox (13.82065pt too wide) in paragraph at lines 104--104
+[][]  
+ []
+
+[5
+
+]
+Package epstopdf Info: Source file: <small_logo.eps>
+(epstopdf)                    date: 2017-06-20 13:46:58
+(epstopdf)                    size: 1319490 bytes
+(epstopdf)             Output file: <small_logo-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-03-17 18:33:50
+(epstopdf)                    size: 29315 bytes
+(epstopdf)             Command: <repstopdf --outfile=small_logo-eps-converted-t
+o.pdf small_logo.eps>
+(epstopdf)             \includegraphics on input line 125.
+Package epstopdf Info: Output file is already uptodate.
+File: small_logo-eps-converted-to.pdf Graphic file (type pdf)
+ <use small_logo-eps-converted-to.pdf>
+Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 125
+.
+(pdftex.def)             Requested size: 16.66591pt x 26.17769pt.
+
+Overfull \hbox (13.82065pt too wide) in paragraph at lines 125--125
+[][]  
+ []
+
+[6
+
+] <interior_point.png, id=101, 650.43pt x 580.41844pt>
 File: interior_point.png Graphic file (type png)
 
 <use interior_point.png>
-Package pdftex.def Info: interior_point.png used on input line 82.
+Package pdftex.def Info: interior_point.png used on input line 171.
 (pdftex.def)             Requested size: 65.0468pt x 58.04524pt.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 82.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 82.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 171.
 
-Overfull \hbox (53.77621pt too wide) in paragraph at lines 82--82
+Overfull \hbox (53.77621pt too wide) in paragraph at lines 171--171
 [] 
  []
 
 
-Overfull \hbox (13.7161pt too wide) in paragraph at lines 82--82
+Overfull \hbox (13.7161pt too wide) in paragraph at lines 171--171
 [] 
  []
 
 
-Overfull \hbox (28.8421pt too wide) detected at line 82
+Overfull \hbox (28.8421pt too wide) detected at line 171
 []  [][] [][][][][][][][][] [][][][][][][] 
  []
 
@@ -1817,23 +1892,23 @@ Package epstopdf Info: Source file: <small_logo.eps>
 (epstopdf)                    size: 29315 bytes
 (epstopdf)             Command: <repstopdf --outfile=small_logo-eps-converted-t
 o.pdf small_logo.eps>
-(epstopdf)             \includegraphics on input line 82.
+(epstopdf)             \includegraphics on input line 171.
 Package epstopdf Info: Output file is already uptodate.
 File: small_logo-eps-converted-to.pdf Graphic file (type pdf)
 <use small_logo-eps-converted-to.pdf>
-Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 82.
-
+Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 171
+.
 (pdftex.def)             Requested size: 16.66591pt x 26.17769pt.
 
-Overfull \hbox (13.82065pt too wide) in paragraph at lines 82--82
+Overfull \hbox (13.82065pt too wide) in paragraph at lines 171--171
 [][]  
  []
 
 
-Overfull \vbox (0.53778pt too high) detected at line 82
+Overfull \vbox (0.53778pt too high) detected at line 171
  []
 
-[4
+[7
 
  <./interior_point.png (PNG copy)>]
 Package epstopdf Info: Source file: <small_logo.eps>
@@ -1844,19 +1919,19 @@ Package epstopdf Info: Source file: <small_logo.eps>
 (epstopdf)                    size: 29315 bytes
 (epstopdf)             Command: <repstopdf --outfile=small_logo-eps-converted-t
 o.pdf small_logo.eps>
-(epstopdf)             \includegraphics on input line 109.
+(epstopdf)             \includegraphics on input line 203.
 Package epstopdf Info: Output file is already uptodate.
 File: small_logo-eps-converted-to.pdf Graphic file (type pdf)
  <use small_logo-eps-converted-to.pdf>
-Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 109
+Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 203
 .
 (pdftex.def)             Requested size: 16.66591pt x 26.17769pt.
 
-Overfull \hbox (13.82065pt too wide) in paragraph at lines 109--109
+Overfull \hbox (13.82065pt too wide) in paragraph at lines 203--203
 [][]  
  []
 
-[5
+[8
 
 ]
 \openout4 = `presentation.vrb'.
@@ -1878,19 +1953,19 @@ Package epstopdf Info: Source file: <small_logo.eps>
 (epstopdf)                    size: 29315 bytes
 (epstopdf)             Command: <repstopdf --outfile=small_logo-eps-converted-t
 o.pdf small_logo.eps>
-(epstopdf)             \includegraphics on input line 143.
+(epstopdf)             \includegraphics on input line 237.
 Package epstopdf Info: Output file is already uptodate.
 File: small_logo-eps-converted-to.pdf Graphic file (type pdf)
  <use small_logo-eps-converted-to.pdf>
-Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 143
+Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 237
 .
 (pdftex.def)             Requested size: 16.66591pt x 26.17769pt.
 
-Overfull \hbox (13.82065pt too wide) in paragraph at lines 143--143
+Overfull \hbox (13.82065pt too wide) in paragraph at lines 237--237
 [][]  
  []
 
-[6
+[9
 
 ]
 \openout4 = `presentation.vrb'.
@@ -1909,42 +1984,19 @@ Package epstopdf Info: Source file: <small_logo.eps>
 (epstopdf)                    size: 29315 bytes
 (epstopdf)             Command: <repstopdf --outfile=small_logo-eps-converted-t
 o.pdf small_logo.eps>
-(epstopdf)             \includegraphics on input line 172.
+(epstopdf)             \includegraphics on input line 266.
 Package epstopdf Info: Output file is already uptodate.
 File: small_logo-eps-converted-to.pdf Graphic file (type pdf)
  <use small_logo-eps-converted-to.pdf>
-Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 172
+Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 266
 .
 (pdftex.def)             Requested size: 16.66591pt x 26.17769pt.
 
-Overfull \hbox (13.82065pt too wide) in paragraph at lines 172--172
+Overfull \hbox (13.82065pt too wide) in paragraph at lines 266--266
 [][]  
  []
 
-[7
-
-]
-Package epstopdf Info: Source file: <small_logo.eps>
-(epstopdf)                    date: 2017-06-20 13:46:58
-(epstopdf)                    size: 1319490 bytes
-(epstopdf)             Output file: <small_logo-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-03-17 18:33:50
-(epstopdf)                    size: 29315 bytes
-(epstopdf)             Command: <repstopdf --outfile=small_logo-eps-converted-t
-o.pdf small_logo.eps>
-(epstopdf)             \includegraphics on input line 179.
-Package epstopdf Info: Output file is already uptodate.
-File: small_logo-eps-converted-to.pdf Graphic file (type pdf)
- <use small_logo-eps-converted-to.pdf>
-Package pdftex.def Info: small_logo-eps-converted-to.pdf used on input line 179
-.
-(pdftex.def)             Requested size: 16.66591pt x 26.17769pt.
-
-Overfull \hbox (13.82065pt too wide) in paragraph at lines 179--179
-[][]  
- []
-
-[8
+[10
 
 ])
 \tf@nav=\write6
@@ -1966,11 +2018,11 @@ Package rerunfilecheck Info: File `presentation.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 164.
  ) 
 Here is how much of TeX's memory you used:
- 29792 strings out of 493029
- 549583 string characters out of 6136234
+ 29830 strings out of 493029
+ 550531 string characters out of 6136234
  613107 words of memory out of 5000000
- 32725 multiletter control sequences out of 15000+600000
- 54021 words of font info for 77 fonts, out of 8000000 for 9000
+ 32758 multiletter control sequences out of 15000+600000
+ 56751 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,21n,66p,10390b,1538s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1985,14 +2037,16 @@ cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss
 9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helv
-etic/uhvro8a.pfb>
-Output written on presentation.pdf (8 pages, 283409 bytes).
+xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helveti
+c/uhvro8a.pfb>
+Output written on presentation.pdf (10 pages, 300618 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 500000)
+ 199 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
  94 words of extra memory for PDF output out of 10000 (max. 10000000)
 

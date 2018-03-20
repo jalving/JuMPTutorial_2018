@@ -1,21 +1,110 @@
 % !TEX root = presentation.tex
-
-
-
 \begin{frame}[t,fragile]  %Use t argument to align text from the top.  Use fragile argument to include listings in slides
   \frametitle{Getting Started}
   \begin{itemize}
   \item All code and slides are in GIT repo \url{https://github.com/jalving/JuMPTutorial_2018.git}
     \item We will use {\tt Julia} notebooks that will be executed on {\tt JuliaBox}
     \item Access \url{http://juliabox.com}
-    \item Click on Sync tab and clone GIT repo \url{https://github.com/jalving/JuMPTutorial_2018.git}
+    \item Click on the git tab and clone GIT repo \url{https://github.com/jalving/JuMPTutorial_2018.git}
     \item Click on Jupyter tab and access notebooks under JuMPTutorial_2018
-    \item Open  {\tt install_packages.ipynb}, click on "Cell" and then on "Run All"
   \end{itemize}
 \end{frame}
 
+\begin{frame}[t]
+    \frametitle{Why Optimize?}
+    \begin{itemize}
+        \item Model real world physical systems
+        \begin{itemize}
+            \item Thermodynamics
+            \item Micro-organism behavior
+            \item Parameter estimation
+        \end{itemize}
+        \item Economics
+        \begin{itemize}
+            \item Supply chain design
+            \item Production scheduling
+            \item Portfolio optimization
+        \end{itemize}
+        \item Resiliency
+        \begin{itemize}
+            \item Disaster recovery
+            \item Identify critical system failures
+        \end{itemize}
+        \item Model Predictive Control
+        \begin{itemize}
+            \item Robotics (e.g. Autonomous vehicles)
+            \item Market participation
+        \end{itemize}
+    \end{itemize}
+
+\end{frame}
+
 \begin{frame}
-    \frametitle{Optimization Overview}
+    \frametitle{Optimization Overview - Linear Programming (LP)}
+    \begin{block}{Standard Linear Programming Problem}
+        \begin{align*}
+            & \text{minimize} && c^T x &&\quad\text{Objective function}\\
+            & \text{subject to} && A x = b  &&\quad\text{Equality constraints} \\
+            &    && x \succeq 0 &&\quad\text{Inequality constraints} \\
+            &    && x \in \mathbb{R}^n  &&\quad\text{Continuous Variables}
+        \end{align*}
+    \end{block}
+    \begin{columns}
+      \column[T]{0.6\textwidth}
+          \begin{exampleblock}{Example Linear Program}
+              \begin{align*}
+                  \text{minimize} \qquad & x+y \\
+                  \text{subject to} \quad \quad & x+y \leq 1 \\
+                  \qquad \qquad & x \geq 0, y \geq 0 \\
+                  \qquad \qquad & x,y \in \mathbb{R}
+              \end{align*}
+          \end{exampleblock}
+      \column[T]{0.4\textwidth}
+      \ \\\
+        \textbf{Algorithms:}
+        \begin{itemize}
+            \item Simplex, Dual Simplex
+            \item Interior Point methods
+            \item LPs with millions of variables can be solved efficiently
+        \end{itemize}
+      \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Optimization Overview - Mixed Integer Linear Programming (MILP)}
+    \begin{block}{Standard Linear Programming Problem}
+        \begin{align*}
+            & \text{minimize} && c^T x + d^T y\\
+            & \text{subject to} && A x + B y= f \\
+            &                   && x \succeq 0, y \succeq 0 \\
+            &                   && x \in \mathbb{R}^n, y \in \mathbb{Z}^p
+        \end{align*}
+    \end{block}
+
+    \begin{columns}
+      \column[T]{0.6\textwidth}
+          \begin{exampleblock}{Example MILP}
+              \vspace{-0.7cm}
+              \begin{align*}
+                  \text{minimize} \qquad & x+y \\
+                  \text{subject to} \quad \quad & x+y \leq 1 \\
+                  \qquad \qquad & x \geq 0 \\
+                  \qquad \qquad & x \in \mathbb{R}, y \in \{0,1\}
+              \end{align*}
+          \end{exampleblock}
+      \column[T]{0.4\textwidth}
+      \ \\\
+        \textbf{Algorithms:}
+        \begin{itemize}
+            \item Branch and Bound
+            \item Branch and Cut
+            \item Hueristic Methods
+        \end{itemize}
+      \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Optimization Overview - Nonlinear Programming (NLP)}
     \begin{block}{Standard Nonlinear Programming (NLP) Problem}
     \begin{alignat*}{3}
         &\min_x &&f(x)  &&\quad\text{Objective function (e.g., economics)}\\
@@ -23,7 +112,7 @@
         & &&g(x) \ge 0 \ \ &&\quad\text{Inequality constraints (e.g. physical limits)}
     \end{alignat*}
     \end{block}
-    This tutorial considers PDE-constrained optimization problems, which we will cast as standard NLPs.
+
     \begin{exampleblock}{Example NLP}
         \vspace{-0.5cm}
         \begin{align*}
@@ -101,11 +190,16 @@
             \item Algebraic modeling language for optimization written in {\tt Julia}
             \item Syntax close to natural mathematical expressions
             \item Processes problems at speeds comparable to {\tt GAMS} and {\tt AMPL}
-            \item Support for open source \& commercial solvers (e.g. {\tt Ipopt}, {\tt Gurobi})
-            \item Automatic computation of derivatives
+            \item Automatic computation of derivatives (NLPs)
         \end{itemize}
         \end{small}
     \end{columns}
+
+    \textbf{Key:}
+    \begin{itemize}
+        \item JuMP is solver independent (supports all problem types).  \\
+        \item Compatible with open-source (e.g. Ipopt) and commercial (e.g. Gurobi) solvers.
+    \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile,t]
@@ -139,7 +233,7 @@
           \min_{x_1,x_2} \ \ &x_1^2 + x_2^2-\mu \log (4-e^{x_1})\\
           s.t. \ \ &x_1 + x_2 = 5
       \end{align*}
-- Example implemented in Julia notebook {\footnotesize {\tt simple_model.ipynb}}
+- Example implemented in Julia notebook {\footnotesize {\tt simple_nonlinear_model.ipynb}}
 \end{frame}
 
 \begin{frame}[fragile,t]
@@ -168,12 +262,5 @@
       \end{lstlisting}
     \vspace{0.5cm}
   \end{columns}
- Example implemented in Julia notebook {\footnotesize{\tt simple_model_set.ipynb}}
-\end{frame}
-
-\begin{frame}
-    \frametitle{MILP Problems}
-    \begin{block}{Standard Mixed Integer Linear Programming Problem}
-    \end{block}
-
+ Example implemented in Julia notebook {\footnotesize{\tt simple_nonlinearmodel_set.ipynb}}
 \end{frame}
